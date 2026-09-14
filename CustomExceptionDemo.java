@@ -1,4 +1,4 @@
-class InvalidStepCountException extends Exception {
+class InvalidStepCountException extends RuntimeException {
     public InvalidStepCountException(String message) {
         super(message);
     }
@@ -18,11 +18,9 @@ public class CustomExceptionDemo {
     }
 
     public static void main(String[] args) {
-        try {
-            double miles = stepsToMiles(5000);
+       
+            double miles = stepsToMiles(-1);
             System.out.println("Miles: " + miles);
-        } catch (InvalidStepCountException e) {
-            System.out.println(e.getMessage());
-        }
+        
     }
 }
