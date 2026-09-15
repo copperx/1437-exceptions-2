@@ -11,7 +11,7 @@ public class Predict {
             System.out.println("A");
             int number = Integer.nextInt(text);
             System.out.println("B: " + number);
-        } catch(NumberFormatException e) {
+        } catch(ArithmeticException e) {
             System.out.println("C: invalid integer");
         } finally {
             System.out.println("D: finally");
